@@ -1,0 +1,187 @@
+*{
+margin:0pt;
+
+}
+#calc_loader{
+border:2px solid white;
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+padding:10px;
+display:none;
+width:300px;
+position:fixed;
+top:20%;
+bottom:10%;
+right:10%;
+left:40%;
+background-color:white;
+}
+body{
+/**
+background-image:url("../img/hg.jpg");
+background-attachment:fixed;
+background-color:white;**/
+}
+
+.timeclass{
+font-size:24pt;
+font-weight:bold;
+}
+
+.mp{
+width:310px;
+padding:10px;
+height:47px;
+border-radius:10px ;
+-moz-border-radius:10px ;
+-webkit-border-radius:10px ;
+-o-border-radius:10px ;
+}
+.pp{
+padding:5px;
+letter-spacing:2px;
+color:green;
+display:none;
+
+}
+
+.sc{
+width:40%;
+height:auto;
+padding-bottom:50px;
+border:2px solid white;
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+	margin-bottom:5%;
+}
+
+.sc:hover{
+width:40%;
+height:auto;
+padding-bottom:20px;
+border:2px solid white;
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+	margin-bottom:5%;
+	background-color:aqua;
+}
+
+.bnn{
+width:60%;
+
+}
+.bnnr{
+width:60%;
+}
+.header{
+padding:20pt;
+background-color:white;
+margin-bottom:3%;
+opacity:0.9;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+}
+
+
+#bd{
+margin:3%;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+
+
+
+}
+.vewp1 ,.vewi1 , .vewe1{
+width:300px;
+margin:1.5%;
+}
+
+#preimg{
+top:2%;
+left:87%;
+right:0%;
+bottom:70%;
+position:fixed;
+width:120px;
+border-radius:50% 50% ;
+-moz-border-radius:50% 50%;
+-webkit-border-radius:50% 50%;
+-o-border-radius:50% 50%;
+
+}
+
+.proimger{
+top:2%;
+left:2%;
+right:87%;
+bottom:70%;
+position:fixed;
+width:120px;
+border-radius:50% 50% ;
+-moz-border-radius:50% 50%;
+-webkit-border-radius:50% 50%;
+-o-border-radius:50% 50%;
+
+}
+#erf{
+width:96%;
+padding-bottom:10%;
+overflow:auto;
+float:left;
+margin-left:2%;
+margin-right:2%;
+}
+.fdi{
+width:;
+display:block;
+border:1px dashed black;
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+}
+.fdii{
+width:;
+	 box-shadow: 0 0 15px #cbcbcb;
+	-moz-box-shadow: 0 0 15px #cbcbcb;
+	-webkit-box-shadow: 0 0 15px #cbcbcb;
+border:3px solid white;
+border-radius:20px ;
+-moz-border-radius:20px ;
+-webkit-border-radius:20px ;
+-o-border-radius:20px ;
+margin:1%;
+}
+.sel1{
+width:120px;
+
+}
+.sell1{
+width:200px;
+
+}
+
+#box2000 > div{ -webkit-transition: width 0.2s ease; -moz-transition: width 0.2s ease; -o-transition: width 0.2s ease; -ms-transition: width 0.2s ease; 	transition: width 0.2s ease; }
+#box2000 > div:hover{width:150%!important; cursor:pointer;}

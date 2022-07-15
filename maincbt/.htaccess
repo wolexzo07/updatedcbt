@@ -1,0 +1,75 @@
+##Disable  directory browsing
+Options All -Indexes
+
+##Error handling page
+
+ErrorDocument 505 "<html><head><title>SERVER ERROR 505</title></head><body><center><h2>SERVER ERROR - Error 505 </h2><p>Please contact the administrator on 08169452139 or send an email to him on <a mailto> </a>wolexzo007@gmail.com</p></center></body></html>"
+
+ErrorDocument 403 "<html><head><title>SERVER ERROR 403</title></head><body><center><h2>FORBIDDEN PAGE - Error 403 </h2><p>Please contact the administrator on 08169452139 or send an email to him on wolexzo007@gmail.com</p></center></body></html>"
+
+ErrorDocument 404 "<html><head><title>SERVER ERROR 404</title></head><body><center><h2>OBJECT NOT FOUND - Error 404 </h2><p>Please contact the administrator on 08169452139 or send an email to him on wolexzo007@gmail.com</p></center></body></html>"
+
+ContentDigest On
+
+##Preventing common hacking techniques
+RewriteEngine On
+# proc/self/environ? no way!
+RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+# Block out any script trying to set a mosConfig value through the URL
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]
+
+# Block out any script trying to set a PHP GLOBALS variable via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2})
+# Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
+
+##Deny access to unauthorized ip address
+allow from all
+
+
+##deny access for any .ht files
+<Files ~ "^\.ht">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
+
+##Enable Caching##
+## Files to Cache for One Month
+<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|swf)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+
+
+## Redirect all Pages to Secure ##
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+<IfModule mod_rewrite.c>
+##RewriteBase /
+##Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+#RewriteRule ^([a-z]+)\/?$ $1.html [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.asp -f
+RewriteRule ^(.*)$ $1.asp
+#RewriteRule ^([a-z]+)\/?$ $1.asp [NC]
+
+</IfModule>

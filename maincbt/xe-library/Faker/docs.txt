@@ -1,0 +1,4 @@
+	https://github.com/FakerPHP/Faker (new repository)
+	https://fakerphp.github.io/
+	
+	https://github.com/fzaninotto/Faker (old repo)
